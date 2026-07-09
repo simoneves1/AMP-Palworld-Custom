@@ -6,6 +6,23 @@ Fixes two problems with the default AMP Palworld setup:
 
 ---
 
+## Adding to AMP (New Instance Wizard)
+
+To make **Palworld (Custom)** appear as an option when creating a new AMP instance:
+
+1. Open the **AMP web UI** and go to **Settings** (top-right gear icon)
+2. Navigate to **Configuration Repositories**
+3. Click **Add Repository** and enter:
+   ```
+   simoneves1/AMP-Palworld-Custom:main
+   ```
+4. Click **Save**, then click **Refresh** (or restart AMP if no refresh button is shown)
+5. Go to **Instances → New Instance** — **Palworld (Custom)** will now appear in the game list
+
+> The instance created this way includes all 120 server settings exposed in the AMP UI (multipliers, PvP, hardcore mode, crossplay, Workshop mods, etc.) and downloads the server via SteamCMD automatically.
+
+---
+
 ## What's included
 
 | File | Purpose |

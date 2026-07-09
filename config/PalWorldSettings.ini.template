@@ -1,0 +1,340 @@
+; ============================================================
+;  PalWorldSettings.ini — Friendly Reference Template
+;  Location on server:
+;    <Instance Root>\Pal\Saved\Config\WindowsServer\PalWorldSettings.ini
+;
+;  Every option is explained below.
+;  Copy the [OptionSettings=...] block at the bottom into your
+;  actual settings file (it must all be on ONE line in-game).
+; ============================================================
+
+[/Script/Pal.PalGameWorldSettings]
+
+; ── SERVER IDENTITY ──────────────────────────────────────────────────────────
+
+; The name players see in the server browser.
+;   Default: "Default Palworld Server"
+ServerName=My Palworld Server
+
+; Short description shown under the server name in the browser.
+;   Default: ""  (empty)
+ServerDescription=
+
+; Public IP shown to players. Leave blank and AMP will auto-detect.
+;   Default: ""  (auto)
+PublicIP=
+
+; Main game port (UDP). Must be forwarded on your firewall/router.
+;   Default: 8211
+PublicPort=8211
+
+; Region tag — purely cosmetic, does not affect routing.
+;   Default: ""  (empty)
+Region=
+
+; ── PASSWORDS ────────────────────────────────────────────────────────────────
+
+; Password players need to join. Leave empty for a public server.
+;   Default: ""  (no password)
+ServerPassword=
+
+; Password for /admin commands in-game. KEEP THIS SECRET.
+;   Default: ""  (admin commands disabled)
+AdminPassword=YourSecureAdminPasswordHere
+
+; ── PLAYER LIMITS ────────────────────────────────────────────────────────────
+
+; Max players in a multiplayer/dedicated server session.
+;   Range: 1–32   Default: 32
+ServerPlayerMaxNum=32
+
+; Max players when playing co-op (non-dedicated).
+;   Range: 1–4    Default: 4
+CoopPlayerMaxNum=4
+
+; Max players per guild.
+;   Default: 20
+GuildPlayerMaxNum=20
+
+; ── SERVER MODE ──────────────────────────────────────────────────────────────
+
+; Enable multiplayer mode (true = dedicated/co-op server, false = solo).
+;   Default: False
+bIsMultiplay=True
+
+; Enable PvP (players can attack each other).
+;   Default: False
+bIsPvP=False
+
+; Allow players to damage structures owned by other guilds.
+;   Default: False
+bEnableDefenseOtherGuildPlayer=False
+
+; Allow players to pick up items dropped by dead members of OTHER guilds.
+;   Default: False
+bCanPickupOtherGuildDeathPenaltyDrop=False
+
+; ── DIFFICULTY ───────────────────────────────────────────────────────────────
+
+; Preset difficulty. Individual rates below override this.
+;   Options: None | Casual | Normal | Hard
+;   Default: None
+Difficulty=None
+
+; What you lose when you die.
+;   Options:
+;     None      = lose nothing
+;     Item      = drop items but keep equipment
+;     ItemAndEquipment = drop items AND equipped gear
+;     All       = drop everything (hardcore)
+;   Default: All
+DeathPenalty=All
+
+; ── TIME SPEED ───────────────────────────────────────────────────────────────
+
+; How fast daytime passes. 1.0 = normal. Higher = faster days.
+;   Range: 0.1–5.0   Default: 1.0
+DayTimeSpeedRate=1.000000
+
+; How fast nighttime passes. 1.0 = normal. Higher = shorter nights.
+;   Range: 0.1–5.0   Default: 1.0
+NightTimeSpeedRate=1.000000
+
+; ── EXPERIENCE ───────────────────────────────────────────────────────────────
+
+; XP gained by players. 2.0 = double XP.
+;   Range: 0.1–20.0   Default: 1.0
+ExpRate=1.000000
+
+; ── PAL (CREATURE) RATES ─────────────────────────────────────────────────────
+
+; Chance of catching a Pal with a sphere. 2.0 = twice as easy to catch.
+;   Range: 0.1–20.0   Default: 1.0
+PalCaptureRate=1.000000
+
+; How many Pals spawn in the world. 2.0 = double spawns.
+;   Range: 0.1–3.0   Default: 1.0
+PalSpawnNumRate=1.000000
+
+; Damage that Pals deal to players/enemies. 2.0 = Pals hit twice as hard.
+;   Range: 0.1–20.0   Default: 1.0
+PalDamageRateAttack=1.000000
+
+; Damage that Pals receive. 0.5 = Pals take half damage (tankier).
+;   Range: 0.1–20.0   Default: 1.0
+PalDamageRateDefense=1.000000
+
+; How fast Pals get hungry. 0.5 = hunger drains at half speed.
+;   Range: 0.1–20.0   Default: 1.0
+PalStomachDecreaceRate=1.000000
+
+; How fast Pals drain stamina. 0.5 = stamina lasts twice as long.
+;   Range: 0.1–20.0   Default: 1.0
+PalStaminaDecreaceRate=1.000000
+
+; How fast Pals regenerate HP passively. 2.0 = twice as fast healing.
+;   Range: 0.1–20.0   Default: 1.0
+PalAutoHPRegeneRate=1.000000
+
+; How fast Pals regen HP while sleeping in a Pal Box.
+;   Range: 0.1–20.0   Default: 1.0
+PalAutoHpRegeneRateInSleep=1.000000
+
+; How many hours a Pal egg takes to hatch. Lower = faster hatching.
+;   Default: 72.0  (3 in-game days)
+PalEggDefaultHatchingTime=72.000000
+
+; ── PLAYER RATES ─────────────────────────────────────────────────────────────
+
+; Damage players deal. 2.0 = players hit twice as hard.
+;   Range: 0.1–20.0   Default: 1.0
+PlayerDamageRateAttack=1.000000
+
+; Damage players receive. 0.5 = players take half damage (more survivable).
+;   Range: 0.1–20.0   Default: 1.0
+PlayerDamageRateDefense=1.000000
+
+; How fast the player's hunger drains. 0.5 = hunger halved.
+;   Range: 0.1–20.0   Default: 1.0
+PlayerStomachDecreaceRate=1.000000
+
+; How fast player stamina drains. 0.5 = stamina lasts twice as long.
+;   Range: 0.1–20.0   Default: 1.0
+PlayerStaminaDecreaceRate=1.000000
+
+; Passive HP regeneration rate for players.
+;   Range: 0.1–20.0   Default: 1.0
+PlayerAutoHPRegeneRate=1.000000
+
+; HP regen while the player is sleeping in a bed.
+;   Range: 0.1–20.0   Default: 1.0
+PlayerAutoHpRegeneRateInSleep=1.000000
+
+; ── WORLD / BUILDING RATES ───────────────────────────────────────────────────
+
+; Damage dealt to buildings/structures.
+;   Range: 0.1–20.0   Default: 1.0
+BuildObjectDamageRate=1.000000
+
+; How fast structures decay naturally over time. 0.0 = no decay.
+;   Range: 0.0–20.0   Default: 1.0
+BuildObjectDeteriorationDamageRate=1.000000
+
+; How many items resources drop when gathered. 2.0 = double drops.
+;   Range: 0.1–20.0   Default: 1.0
+CollectionDropRate=1.000000
+
+; HP of harvestable objects (trees, rocks). Higher = more hits needed.
+;   Range: 0.1–20.0   Default: 1.0
+CollectionObjectHpRate=1.000000
+
+; How fast resource nodes respawn. 0.5 = respawn in half the usual time.
+;   Range: 0.1–20.0   Default: 1.0
+CollectionObjectRespawnSpeedRate=1.000000
+
+; How many items enemies drop on death. 2.0 = double loot.
+;   Range: 0.1–20.0   Default: 1.0
+EnemyDropItemRate=1.000000
+
+; How fast Pals work at your base. 2.0 = twice the production speed.
+;   Range: 0.1–20.0   Default: 1.0
+WorkSpeedRate=1.000000
+
+; Maximum number of item drops on the ground at once.
+;   Default: 3000
+DropItemMaxNum=3000
+
+; How many hours a dropped item stays before disappearing.
+;   Default: 1.0
+DropItemAliveMaxHours=1.000000
+
+; ── BASE CAMP ────────────────────────────────────────────────────────────────
+
+; How many base camps each guild can own.
+;   Default: 128
+BaseCampMaxNum=128
+
+; How many Pals can work at a single base camp.
+;   Default: 15
+BaseCampWorkerMaxNum=15
+
+; ── PVP / DAMAGE FLAGS ───────────────────────────────────────────────────────
+
+; Allow players to damage other players directly.
+;   Default: False
+bEnablePlayerToPlayerDamage=False
+
+; Allow guild members to accidentally hurt each other (friendly fire).
+;   Default: False
+bEnableFriendlyFire=False
+
+; ── INVASIONS & EVENTS ───────────────────────────────────────────────────────
+
+; Enable random Pal invasion raids on player bases.
+;   Default: True
+bEnableInvaderEnemy=True
+
+; How many minutes between supply drop events.
+;   Default: 180
+SupplyDropSpan=180
+
+; ── GUILD / OFFLINE MANAGEMENT ───────────────────────────────────────────────
+
+; Automatically disband a guild if no member has logged in for the
+; time below. Helps clean up inactive guilds on public servers.
+;   Default: False
+bAutoResetGuildNoOnlinePlayers=False
+
+; Hours of inactivity before a guild is auto-disbanded (see above).
+;   Default: 72.0
+AutoResetGuildTimeNoOnlinePlayers=72.000000
+
+; ── LOGIN / PENALTY FLAGS ────────────────────────────────────────────────────
+
+; Penalise players (SAN / hunger) when they haven't logged in recently.
+;   Default: True
+bEnableNonLoginPenalty=True
+
+; Whether the player character stays in-world after logging out.
+;   True  = body stays (other players can interact with/loot it)
+;   False = character despawns on logout (safer for PvP servers)
+;   Default: False
+bExistPlayerAfterLogout=False
+
+; ── TRAVEL & SPAWN ───────────────────────────────────────────────────────────
+
+; Allow fast-travel between discovered waypoints.
+;   Default: True
+bEnableFastTravel=True
+
+; Let players choose their spawn location from the map on first join.
+;   Default: True
+bIsStartLocationSelectByMap=True
+
+; ── RCON ─────────────────────────────────────────────────────────────────────
+
+; Enable RCON (remote console) so external tools/scripts can send commands.
+;   Default: False
+RCONEnabled=True
+
+; Port RCON listens on. Must be open on your firewall.
+;   Default: 25575
+RCONPort=25575
+
+; ── REST API ─────────────────────────────────────────────────────────────────
+
+; Enable the built-in REST API for external server management tools.
+;   Default: False
+RESTAPIEnabled=False
+
+; Port the REST API listens on.
+;   Default: 8212
+RESTAPIPort=8212
+
+; Show the player list via the REST API (privacy consideration).
+;   Default: False
+bShowPlayerList=False
+
+; ── AUTHENTICATION & ANTI-CHEAT ──────────────────────────────────────────────
+
+; Require Steam/Epic authentication to join.
+;   Default: True  (set False ONLY for LAN/offline testing)
+bUseAuth=True
+
+; Allow connections from this platform.
+;   Options: Steam | EpicGames
+;   Default: Steam
+AllowConnectPlatform=Steam
+
+; URL of the ban list fetched on startup.
+;   Default: https://api.palworldgame.com/api/banlist.txt
+BanListURL=https://api.palworldgame.com/api/banlist.txt
+
+; ── LOGGING ──────────────────────────────────────────────────────────────────
+
+; Log line format written to PalServer.log.
+;   Options: Text | Json
+;   Default: Text
+LogFormatType=Text
+
+; Automatically keep backup save files.
+;   Default: True
+bIsUseBackupSaveData=True
+
+; ── AIM ASSIST ───────────────────────────────────────────────────────────────
+
+; Aim-assist for controller players.
+;   Default: True
+bEnableAimAssistPad=True
+
+; Aim-assist for keyboard/mouse players.
+;   Default: False
+bEnableAimAssistKeyboard=False
+
+; ============================================================
+;  ACTUAL SETTINGS BLOCK (paste into your real .ini file)
+;  Must be ALL on ONE LINE with no line breaks.
+; ============================================================
+;
+; [/Script/Pal.PalGameWorldSettings]
+; OptionSettings=(Difficulty=None,DayTimeSpeedRate=1.000000,NightTimeSpeedRate=1.000000,ExpRate=1.000000,PalCaptureRate=1.000000,PalSpawnNumRate=1.000000,PalDamageRateAttack=1.000000,PalDamageRateDefense=1.000000,PlayerDamageRateAttack=1.000000,PlayerDamageRateDefense=1.000000,PlayerStomachDecreaceRate=1.000000,PlayerStaminaDecreaceRate=1.000000,PlayerAutoHPRegeneRate=1.000000,PlayerAutoHpRegeneRateInSleep=1.000000,PalStomachDecreaceRate=1.000000,PalStaminaDecreaceRate=1.000000,PalAutoHPRegeneRate=1.000000,PalAutoHpRegeneRateInSleep=1.000000,BuildObjectDamageRate=1.000000,BuildObjectDeteriorationDamageRate=1.000000,CollectionDropRate=1.000000,CollectionObjectHpRate=1.000000,CollectionObjectRespawnSpeedRate=1.000000,EnemyDropItemRate=1.000000,DeathPenalty=All,bEnablePlayerToPlayerDamage=False,bEnableFriendlyFire=False,bEnableInvaderEnemy=True,bEnableAimAssistPad=True,bEnableAimAssistKeyboard=False,DropItemMaxNum=3000,DropItemAliveMaxHours=1.000000,BaseCampMaxNum=128,BaseCampWorkerMaxNum=15,bAutoResetGuildNoOnlinePlayers=False,AutoResetGuildTimeNoOnlinePlayers=72.000000,GuildPlayerMaxNum=20,PalEggDefaultHatchingTime=72.000000,WorkSpeedRate=1.000000,bIsMultiplay=True,bIsPvP=False,bCanPickupOtherGuildDeathPenaltyDrop=False,bEnableNonLoginPenalty=True,bEnableFastTravel=True,bIsStartLocationSelectByMap=True,bExistPlayerAfterLogout=False,bEnableDefenseOtherGuildPlayer=False,CoopPlayerMaxNum=4,ServerPlayerMaxNum=32,ServerName="My Palworld Server",ServerDescription="",AdminPassword="YourSecureAdminPasswordHere",ServerPassword="",PublicPort=8211,PublicIP="",RCONEnabled=True,RCONPort=25575,Region="",bUseAuth=True,BanListURL="https://api.palworldgame.com/api/banlist.txt",RESTAPIEnabled=False,RESTAPIPort=8212,bShowPlayerList=False,AllowConnectPlatform=Steam,bIsUseBackupSaveData=True,LogFormatType=Text,SupplyDropSpan=180)

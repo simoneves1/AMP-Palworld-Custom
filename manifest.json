@@ -3,7 +3,7 @@
 	"authors": ["simoneves1"],
 	"origin": "https://github.com/simoneves1/AMP-Palworld-Custom.git",
 	"url": "https://github.com/simoneves1/AMP-Palworld-Custom",
-	"imagefile": "",
+	"imagefile": "https://cdn.cloudflare.steamstatic.com/steam/apps/1623730/header.jpg",
 	"prefix": "",
 	"repotype": "AppTemplates"
 }

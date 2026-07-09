@@ -16,7 +16,7 @@ param(
 )
 
 # --- Configuration -----------------------------------------------------------
-$ServerExe    = ".\PalServer.exe"
+$ServerExe    = ".\Pal\Binaries\Win64\PalServer-Win64-Shipping-Cmd.exe"
 $LogFile      = ".\Pal\Saved\Logs\PalServer.log"
 $LogDir       = ".\Pal\Saved\Logs"
 $PollMs       = 200   # How often (ms) to check the log for new lines

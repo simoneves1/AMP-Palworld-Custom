@@ -14,7 +14,6 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2394010",
-        "UpdateSourceVersion": "public",
         "SkipOnFailure": false
     },
     {

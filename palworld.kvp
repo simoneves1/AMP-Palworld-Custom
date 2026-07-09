@@ -52,6 +52,7 @@ App.ExitFile=app_exit.lck
 App.RestartDelaySeconds=0
 App.HasWriteableConsole=False
 App.HasReadableConsole=True
+App.TailLogFilePath=Pal/Saved/Logs/PalServer.log
 App.UDPLogger=False
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
